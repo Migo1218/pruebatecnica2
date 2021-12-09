@@ -18,9 +18,6 @@ const Buscar = () => {
 
     
 
-    useEffect(() => {
-        dispatch(listarProductos())
-     }, [ dispatch])
 
 
     const formik = useFormik({
@@ -31,7 +28,7 @@ const Buscar = () => {
      
 
         onSubmit: ({search}) => {
-            // dispatch(searchAsyn(search))
+            dispatch(searchAsyn(search))
            
         }
     }

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const Principal = () => {
 
-  const [datos] = useSelector(state => state.search.productos)
+  const [datos] = useSelector(store => store.search.productos)
   console.log(datos)
   
   
@@ -16,8 +16,8 @@ const Principal = () => {
       <Row >
         <Col>
           <CardGroup style={{ width: "100rem" }}>
-            {datos.map((dat) => (
-              <Card key={dat.id} style={{ width: "18rem" }}>
+            {datos && datos.map((dat) => (
+              <Card style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={dat.imagen} />
                 <Card.Body>
                   <Card.Title>{dat.nombre}</Card.Title>

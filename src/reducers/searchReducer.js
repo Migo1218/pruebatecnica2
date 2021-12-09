@@ -9,6 +9,7 @@ export const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.listar:
       return {
+        
         productos: [...state.productos, action.payload],
       };
 

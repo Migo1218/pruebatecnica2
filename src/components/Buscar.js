@@ -39,6 +39,7 @@ const Buscar = () => {
     )
   return (
     <div>
+      <h1>hola</h1>
       <Form onSubmit={formik.handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="text" name='search' placeholder="Ingrese su búsqueda" onChange={formik.handleChange}/>
